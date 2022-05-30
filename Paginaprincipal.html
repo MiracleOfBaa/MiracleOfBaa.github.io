@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Escape From Baa </title>
+    <link rel="icon" type="image/x-icon" href="./Imagenes/apple-icon-120x120.png">
+    <link rel="stylesheet" href="./CSS/paginaprincipal.css">
+  </head>
+
+  <body style="background-image:url(./Imagenes/fondo\ de\ pagina\ principal.jpg)">
+    <h1 id="escape" style="font-size:500%; padding-bottom: 120px;">ESCAPE FROM BAA</h1>
+    <input class="input" id="numb" type="text" placeholder="Codigo" required/>
+    <br>
+    <br></br>
+
+    <button id="catalana">Comprobar codigo</button>
+
+    <script>
+  document.querySelector("#catalana").addEventListener('click',function(){
+    if(document.querySelector('#numb').value=='11887'){
+      alert('Has conseguido abrir la puerta!')
+      location.href='../Credit de sintesi/Paginadespertar.html'
+    }
+    else{
+      alert('Codigo incorrecto')
+    }
+  })
+  </script>
+
+
+  </body>
+
+</html>

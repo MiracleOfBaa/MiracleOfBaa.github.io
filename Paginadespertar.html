@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Escape From Baa </title>
+    <link rel="icon" type="image/x-icon" href="./Imagenes/apple-icon-120x120.png">
+    <link rel="stylesheet" href="./CSS/Paginadespertar.css">
+</head>
+<body style="background-color:rgb(0, 0, 0);">
+    <h1 id="reglas" style="font-size:350%;">REGLES DEL JOC</h1>
+    <h1 id="joc1" align="center" style="color:#ffffff";>
+        1. No fer trampa.
+        Jugar un joc és senzill.
+        <br>
+        <br>
+        2. Ser un bon perdedor.
+        No vas fer trampa i vas perdre. Entenem per què de vegades pot ser frustrant invertir tant en un joc i no guanyar. Però això no justifica que tinguis actituds negatives.
+        <br>
+        <br>
+        3. Parar atenció a les regles
+        Explicar un joc de taula no és cosa fàcil i és una inversió desforç i temps que una altra persona està fent perquè tu et puguis divertir. Si algú més està explicant un joc, posa atenció.
+        <br>
+        <br>
+        4. Acabar els jocs
+        Això és senzill. Abans de jugar, esbrina quant de temps dura el joc. I si acceptes començar a jugar, estàs acceptant quedar-s'hi fins al final. Tingueu en compte que si hi ha persones noves al joc, es pot allargar entre un 20-40% més del que el joc suggereix (depenent del tipus de joc).
+        <br>
+        <br>
+        5. Tractar bé el joc
+        Això és essencial. Si jugaràs un joc que no és teu, tracta-ho bé. Fins i tot si és teu. És normal que els jocs es gastin després de jugar-los moltes vegades, però no per això cal ser descurats amb aquests.
+        <br>
+        </h1>
+        <form id="formulari">
+            <input class="input" id="usuario" type="text" placeholder="Escriu el teu nom" required/>
+            <br>
+            <br>
+            <button id="boton2" type="submit" >Començar el Joc</button>
+        </form>
+
+        <script>
+            document.querySelector('#formulari').addEventListener('submit', function(event){
+                event.preventDefault()
+                let nom = document.querySelector('#usuario').value
+                sessionStorage.setItem('nomJugador', nom)
+                location.href = '../Credit de sintesi/Joc1.2.html'
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Escape From Baa </title>
+    <link rel="icon" type="image/x-icon" href="./Imagenes/apple-icon-120x120.png">
+    <link rel="stylesheet" href="./CSS/joc3.css">
+</head>
+<body>
+
+<!-- TRIVIA: Sección 2 -->
+<section class='s2' id='two'>
+    <h1 class='a' id='choices'></h1>
+    <p class='p2'>Trieu una categoria per jugar</p>
+<div class='flex-container'>
+    <div><img src='../Credit de sintesi/Imagenes/redes-y-cables-imagen.png'
+        alt='Cables'
+        width=45%
+        class='i2'></div>  
+    <div><img src='../Credit de sintesi/Imagenes/sistemas operativos.png'
+        alt='Sistemas-operativos'
+        width=65%
+        class='i2'></div>
+    </div>
+<div class='flex-container'>
+    <div><button type='button' 
+            class='b2' 
+            id='category1'
+            value='Xarxes'
+            onclick='category1()'>Xarxes</button></div>
+    <div><button type='button'
+            class='b3' 
+            id='category2'
+            value='Sistemes-operatius' 
+            onclick='category2()'>Sistemes operatius</button></div>
+    </div>
+</section>
+
+<!-- TRIVIA: Sección Redes -->
+<section class='SERIES' id='three'>
+    <h1 class='a'>Categoría: Xarxes</h1>
+    <!--Pregunta 1 Xarxes-->
+    <section class='preguntas' id='3a'>
+    <h4>Pregunta 1:</br>
+    ¿Els ordinadors que formen una xarxa d'àrea metropolitana estan situats a?</h4></br>
+        <button class='b4' id='o1'>A. Un mateix edifici</button></br>
+        <button class='b4' id='o2'>B. Una mateixa ciutat</button></br>
+        <button class='b4' id='o3'>C. Dos o més països diferents</button></br>
+    </section>
+
+    <!--Pregunta 2 Xarxes-->
+    <section class='preguntas' id='3b'>
+        <h4>Pregunta 2:</br>
+        Quin és el nom de l'estàndard amb què compleixen les targetes de xarxa:</h4></br>
+        <button class='b4' id='o4'>A. Ethernet</button></br>
+        <button class='b4' id='o5'>B. Intranet</button></br>
+        <button class='b4' id='o6'>C. Internet</button></br>
+    </section>
+
+    <!--Pregunta 3 Xarxes-->
+    <section class='preguntas' id='3c'>
+        <h4>Pregunta 3:</br>
+            Quin tipus de connexions se solen utilitzar per crear xarxes MAN?</h4></br>
+        <button class='b4' id='o7'>A. Conductors de coure</button></br>
+        <button class='b4' id='o8'>B. Enllaços làser</button></br>
+        <button class='b4' id='o9'>C. Fibra òptica i enllaços de microones</button></br>
+    </section></section>
+
+<section class='PELICULAS' id='four'>
+    <h1 class='a'>Categoría: Sistemas operatius</h1>
+    <!--Pregunta 1 Sistemas operatius-->
+    <section class='preguntas' id='4a'>
+    <h4>Pregunta 1:</br>
+        Quin dels següents no és un sistema operatiu?</h4></br>
+        <button class='b4' id='o10'>A. Linux</button></br>
+        <button class='b4' id='o11'>B. Kernel</button></br>
+        <button class='b4' id='o12'>C. Windows 2000 server</button></br>
+    </section>
+    <!--Pregunta 2 Sistemas operatius-->
+    <section class='preguntas' id='4b'>
+        <h4>Pregunta 2:</br>
+        Què és un sistema multiusuari?</h4></br>
+        <button class='b4' id='o13'>A. permet executar diversos programes alhora.</button></br>
+        <button class='b4' id='o14'>B. Que un mateix ordinador pot tenir diversos microprocessadors que cal utilitzar simultàniament</button></br>
+        <button class='b4' id='o15'>C. permet que diversos usuaris puguin executar programes alhora</button></br>
+    </section>
+    <!--Pregunta 3 Sistemas operatius-->
+    <section class='preguntas' id='4c'>
+        <h4>Pregunta 3:</br>
+        ¿Una edició de windows 2000 és?</h4></br>
+        <button class='b4' id='o16'>A. Windows 2000 server</button></br>
+        <button class='b4' id='o17'>B. Windows NT</button></br>
+        <button class='b4' id='o18'>C. Windows vista</button></br>
+    </section></section>
+<section class='s1' id='final1'>
+    <h1>RESULTATS</h1>
+    <p>El teu score a la categoria Xarxes és:</p></br>
+    <p class='score' id='scoreseries'></p></br>
+    <button type='button' 
+            id='refresh1' 
+            class='b1'
+            onclick='reload()'>Tornar a jugar</button>
+    <button type='button' style="display:none"
+            id='Nextlevel1' 
+            class='b1'
+            onclick='reload()'>Siguiente Nivel</button>
+</section>
+<section class='s1' id='final2'>
+    <h1>RESULTATS</h1>
+    <p>El teu score a la categoria Sistemes operatius és:</p></br>
+    <p class='score' id='scoremovies'></p></br>
+    <button type='button' 
+            id='refresh2' 
+            class='b1'
+            onclick='reload()'>Tornar a jugar</button>
+    <button type='button' style="display:none"
+            id='Nextlevel2' 
+            class='b1'
+            onclick='reload()'>Siguiente Nivel</button>
+<script>//Ocultar todas las secciones
+    document.getElementById('three').style.display = 'none';
+    document.getElementById('four').style.display = 'none';
+    document.getElementById('final1').style.display = 'none';
+    document.getElementById('final2').style.display = 'none';
+    //Petición de nombre, generación de bienvenida personalizada y pase a siguiente sección (sección 2)
+    const welcomeGamer = function welcome(){
+    const gamer = sessionStorage.getItem('nomJugador');
+        const choices = document.getElementById('choices');  
+        choices.textContent = `Bienvenidx, ${gamer}`;
+    if (document.getElementById('two').style.display == 'none'){
+        document.getElementById('two').style.display = 'block';
+    }
+    }
+    //Elección de categoría
+    //Series
+    function category1(){
+        document.getElementById('two').style.display = 'none';
+    if (document.getElementById('three').style.display == 'none'){    
+        document.getElementById('three').style.display = 'block';
+        document.getElementById('3a').style.display='block';
+        document.getElementById('3b').style.display='none';
+        document.getElementById('3c').style.display='none';
+    }}
+    //Peliculas
+    function category2(){
+        document.getElementById('two').style.display = 'none';
+    if (document.getElementById('four').style.display == 'none'){    
+        document.getElementById('four').style.display = 'block';
+        document.getElementById('4a').style.display='block';
+        document.getElementById('4b').style.display='none';
+        document.getElementById('4c').style.display='none';
+    }}
+    //SCORE Xarxes: Recol·lecció de respostes i sumatòria de puntuacions
+    let score1= new Array();
+    //Xarxes. Pregunta 1
+    document.getElementById('o1').addEventListener('click', incorrecta1);
+    document.getElementById('o2').addEventListener('click', correcta1);
+    document.getElementById('o3').addEventListener('click', incorrecta1);
+    //Xarxes. Pregunta 2
+    document.getElementById('o4').addEventListener('click', correcta1);
+    document.getElementById('o5').addEventListener('click', incorrecta1);
+    document.getElementById('o6').addEventListener('click', incorrecta1);
+    //Xarxes. Pregunta 3
+    document.getElementById('o7').addEventListener('click', incorrecta1);
+    document.getElementById('o8').addEventListener('click', incorrecta1);
+    document.getElementById('o9').addEventListener('click', correcta1);
+    //Agrega puntaje 1 al score1
+    function correcta1(){
+    if(score1.length<1){
+        score1.push(1);
+        document.getElementById('three').style.display='block';
+        document.getElementById('3a').style.display='none';
+        document.getElementById('3b').style.display='block';
+        document.getElementById('3c').style.display='none';  
+    } else if(score1.length<2){
+        score1.push(1);
+        document.getElementById('three').style.display='block';
+        document.getElementById('3a').style.display='none';
+        document.getElementById('3b').style.display='none';
+        document.getElementById('3c').style.display='block';
+    } else if(score1.length<3){
+        score1.push(1);
+        document.getElementById('three').style.display='none';
+        document.getElementById('final1').style.display='block';
+    } 
+    let puntos=parseInt(score1[0]+score1[1]+score1[2])
+    document.getElementById('scoreseries').innerHTML=(`${puntos} pts`);
+    if (puntos==3){
+        document.getElementById('Nextlevel1').style.display='';
+        document.querySelector('#refresh1').style.display='none';
+    }
+    
+    }
+    //Agrega puntaje 0 al score1
+    function incorrecta1(){
+    if(score1.length<1){
+        score1.push(0);
+        document.getElementById('three').style.display='block';
+        document.getElementById('3a').style.display='none';
+        document.getElementById('3b').style.display='block';
+        document.getElementById('3c').style.display='none';  
+    } else if(score1.length<2){
+        score1.push(0);
+        document.getElementById('three').style.display='block';
+        document.getElementById('3a').style.display='none';
+        document.getElementById('3b').style.display='none';
+        document.getElementById('3c').style.display='block';
+    } else if(score1.length<3){
+        score1.push(0);
+        document.getElementById('three').style.display='none';
+        document.getElementById('final1').style.display='block';
+    }
+    let puntos2=parseInt(score1[0]+score1[1]+score1[2])
+    document.getElementById('scoreseries').innerHTML=(`${puntos2} pts`);
+    if (puntos2==3){
+        document.getElementById('Nextlevel1').style.display='';
+        document.querySelector('#refresh1').style.display='none';
+    }
+    }
+    //SCORE Sistemas operatius: Recol·lecció de respostes i sumatòria de puntuacions
+    let score2= new Array();
+    //Sistemas operatius. Pregunta 1
+    document.getElementById('o10').addEventListener('click', incorrecta2);
+    document.getElementById('o11').addEventListener('click', correcta2);
+    document.getElementById('o12').addEventListener('click', incorrecta2);
+    //Sistemas operatius. Pregunta 2
+    document.getElementById('o13').addEventListener('click', incorrecta2);
+    document.getElementById('o14').addEventListener('click', incorrecta2);
+    document.getElementById('o15').addEventListener('click', correcta2);
+    //Sistemas operatius. Pregunta 3
+    document.getElementById('o16').addEventListener('click', correcta2);
+    document.getElementById('o17').addEventListener('click', incorrecta2);
+    document.getElementById('o18').addEventListener('click', incorrecta2);
+    //Agrega puntaje 1 al score2
+    function correcta2(){
+    if(score2.length<1){
+        score2.push(1);
+        document.getElementById('four').style.display='block';
+        document.getElementById('4a').style.display='none';
+        document.getElementById('4b').style.display='block';
+        document.getElementById('4c').style.display='none';  
+    } else if(score2.length<2){
+        score2.push(1);
+        document.getElementById('four').style.display='block';
+        document.getElementById('4a').style.display='none';
+        document.getElementById('4b').style.display='none';
+        document.getElementById('4c').style.display='block';
+    } else if(score2.length<3){
+        score2.push(1);
+        document.getElementById('four').style.display='none';
+        document.getElementById('final2').style.display='block';
+    }
+    let puntos3=parseInt(score2[0]+score2[1]+score2[2])
+    document.getElementById('scoremovies').innerHTML=(`${puntos3} pts`);
+    if (puntos3==3){
+        document.getElementById('Nextlevel2').style.display='';
+        document.querySelector('#refresh2').style.display='none';
+    }
+    }
+    //Agrega puntaje 0 al score1
+    function incorrecta2(){
+    if(score2.length<1){
+        score2.push(0);
+        document.getElementById('four').style.display='block';
+        document.getElementById('4a').style.display='none';
+        document.getElementById('4b').style.display='block';
+        document.getElementById('4c').style.display='none';  
+    } else if(score2.length<2){
+        score2.push(0);
+        document.getElementById('four').style.display='block';
+        document.getElementById('4a').style.display='none';
+        document.getElementById('4b').style.display='none';
+        document.getElementById('4c').style.display='block';
+    } else if(score2.length<3){
+        score2.push(0);
+        document.getElementById('four').style.display='none';
+        document.getElementById('final2').style.display='block';
+    }
+    let puntos4=parseInt(score2[0]+score2[1]+score2[2])
+    document.getElementById('scoremovies').innerHTML=(`${puntos4} pts`);
+    if (puntos4==3){
+        document.getElementById('Nextlevel2').style.display='';
+        document.querySelector('#refresh2').style.display='none';
+    }
+    }
+    //Regresar
+    document.getElementById('Nextlevel1').addEventListener('click', function(){
+        location.href = '../Credit de sintesi/Joc4.2.html'
+    })
+    document.getElementById('Nextlevel2').addEventListener('click', function(){
+        location.href = '../Credit de sintesi/Joc4.2.html'
+    })
+    function reload() {
+    score1=new Array()
+    score2=new Array()
+    document.getElementById('two').style.display='block';
+    document.getElementById('final1').style.display='none';
+    document.getElementById('final2').style.display='none';
+    document.getElementById('Nextlevel1').style.display='none';
+    document.getElementById('Nextlevel2').style.display='none';
+    document.getElementById('refresh1').style.display='';
+    document.getElementById('refresh2').style.display='';
+    document.getElementById('name').value="";
+    }
+    //Al fin. Uf. Sólo falta la cuenta regresiva :O</script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            alert('T\'han tancat en una habitació, la porta està tancada, trobes un paper que diu respon les preguntes i podràs sortir. Cada cop estàs més a prop de sortir. Respon les següents preguntes perquè es pugui obrir la porta.')
+            welcomeGamer()
+        }, 400)
+    })
+</script>
+</body>
+</html>

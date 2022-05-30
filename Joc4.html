@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Credit de sintesi/CSS/pagina4.css">
+    <script src="artyom.js"></script>
+    <title> Escape From Baa </title>
+    <link rel="icon" type="image/x-icon" href="./Imagenes/apple-icon-120x120.png">
+</head>
+<body>
+<button onclick="startArtyom()">start listening</button>
+
+<script>
+    const artyom = new Artyom()
+    artyom.addCommands({
+    indexes: ['llévame al juego'],
+    action(i){
+    location.href="../Credit de sintesi/Joc1.html"
+    }
+            })
+    function startArtyom(){
+    artyom.initialize({
+    lang: 'es-ES',
+    continuous: false,
+    debug: true,
+    listen: true
+    })
+}
+</script>
+
+<h2 id="nombre">Nombre de usuario: </h2>
+<script>
+    window.addEventListener('DOMContentLoaded', function(){
+    document.querySelector('#nombre').textContent += sessionStorage.getItem('nomJugador')
+    })
+</script>
+</body>
+</html>

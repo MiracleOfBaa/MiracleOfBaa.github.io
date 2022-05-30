@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Escape From Baa </title>
+    <link rel="icon" type="image/x-icon" href="./Imagenes/apple-icon-120x120.png">
+    <link rel="stylesheet" href="./CSS/Joc1.css">
+  </head>
+
+  <body style="background-image:url(./Imagenes/fondo\ de\ pantalla\ juego\ 1.png)">
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            alert('Benvingut al primer joc d\'aquest Escape Room El primer joc consisteix a trobar la contrasenya oculta en aquesta foto, guarda la contrasenya serà molt important en una de les proves.')
+        }, 1000)
+    })
+</script>
+<img src="../Credit de sintesi/Imagenes/foto juego 1.png" 
+width="600"
+height="430">
+<br>
+<br>
+
+<input class="input" id="numb" type="number" placeholder="Codigo" required/>
+<br>
+<br>
+<br>
+<button type="button" id="boton-puerta">Abrir puerta</button>
+<br>
+<br>
+<h2 id="nombre">Nombre de usuario: </h2>
+<script>
+    window.addEventListener('DOMContentLoaded', function(){
+        document.querySelector('#nombre').textContent += sessionStorage.getItem('nomJugador')
+    })
+document.querySelector("#boton-puerta").addEventListener('click',function(){
+  if(document.querySelector('#numb').value=='8'){
+    alert('Has conseguido abrir la puerta!')
+    location.href='../Credit de sintesi/Joc2.2.html'
+  }
+  else{
+    alert('Codigo incorrecto')
+  }
+})
+</script>
+
+  </body>
+  </html>

@@ -1,0 +1,65 @@
+/*Hoja de estilos*/
+html {
+    background-image:url(../Imagenes/joc2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+body {
+    color: #ffffff;
+    margin-top: 3cm;
+}
+
+a {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+    
+    a:hover {
+    background-color: #000000;
+    box-shadow: 0px 15px 20px rgba(44, 45, 45, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+    }
+    
+    a:active {
+    transform: translateY(-1px);
+    }
+
+.marco{
+    position: absolute;
+    z-index: 0;
+    left:calc(35% - 7px);
+    top: 20px;
+    resize: none;
+    width: 620px;
+    height: 560px;
+}
+*{
+    position: relative;
+    z-index: 1;
+}
+svg{
+    padding-right: 67px;
+}
+
+#entorno {
+	display: block;
+	margin: 0 auto;
+}
+
+#fondo {
+	opacity: 0.3;
+}
