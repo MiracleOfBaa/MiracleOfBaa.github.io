@@ -14,11 +14,11 @@
   <script>
     window.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
-            alert('Benvingut al primer joc d\'aquest Escape Room El primer joc consisteix a trobar la contrasenya oculta en aquesta foto, guarda la contrasenya serà molt important en una de les proves.')
+            alert('Bienvenido al primer juego de este Escape Room. El primer juego consiste en encontrar la contraseña oculta en esta foto, guarda la contraseña será muy importante en una de las pruebas.')
         }, 1000)
     })
 </script>
-<img src="../Credit de sintesi/Imagenes/foto juego 1.png" 
+<img src="./Imagenes/foto juego 1.png" 
 width="600"
 height="430">
 <br>
@@ -31,7 +31,7 @@ height="430">
 <button type="button" id="boton-puerta">Abrir puerta</button>
 <br>
 <br>
-<h2 id="nombre">Nombre de usuario: </h2>
+<h2 id="nombre"> Nombre de usuario: </h2>
 <script>
     window.addEventListener('DOMContentLoaded', function(){
         document.querySelector('#nombre').textContent += sessionStorage.getItem('nomJugador')
@@ -39,7 +39,7 @@ height="430">
 document.querySelector("#boton-puerta").addEventListener('click',function(){
   if(document.querySelector('#numb').value=='8'){
     alert('Has conseguido abrir la puerta!')
-    location.href='../Credit de sintesi/Joc2.2.html'
+    location.href='/Joc2.2.html'
   }
   else{
     alert('Codigo incorrecto')

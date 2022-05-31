@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Escape From Baa </title>
+    <link rel="icon" type="image/x-icon" href="./Imagenes/apple-icon-120x120.png">
+    <link rel="stylesheet" href="./CSS/Paginadespertar.css">
+</head>
+<body style="background-color:rgb(0, 0, 0);">
+    <h1 id="reglas" style="font-size:400%;">Final</h1>
+    <h1 id="joc1" align="center" style="color:#ffffff";>
+    Has conseguido escapar del escape room.
+    <br>
+    <br>
+    Ahora eres libre de volver a jugar.
+    <br>
+    <br>
+    Si quieres volver a jugar, pulsa el boton de abajo.
+    <br>
+    <br>
+    Felicidades. :)
+            <form id="formulari">
+            <br>
+            <br>
+            <button id="boton2" type="submit" >Volver a empezar</button>
+        </form>
+
+        <script>
+            document.querySelector('#formulari').addEventListener('submit', function(event){
+                event.preventDefault()
+                location.href = './Joc1.html'
+            })
+        </script>
+    </body>
+</html>

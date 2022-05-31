@@ -1,4 +1,11 @@
 /*Hoja de estilos*/
+@font-face {
+    font-family: "Lazy";
+    src: url("../Tipos-de-letras/Lazy.otf")
+    format('truetype');
+    font-style: bold;
+    font-weight: bold;
+} 
 html {
     background-image:url(../Imagenes/joc2.png);
     background-repeat: no-repeat;
@@ -62,4 +69,12 @@ svg{
 
 #fondo {
 	opacity: 0.3;
+}
+
+#nombre {
+    font-family: "Lazy";
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0cm;
 }

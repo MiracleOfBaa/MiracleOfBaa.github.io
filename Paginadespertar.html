@@ -7,33 +7,33 @@
     <link rel="stylesheet" href="./CSS/Paginadespertar.css">
 </head>
 <body style="background-color:rgb(0, 0, 0);">
-    <h1 id="reglas" style="font-size:350%;">REGLES DEL JOC</h1>
+    <h1 id="reglas" style="font-size:350%;">REGLAS DEL JUEGO</h1>
     <h1 id="joc1" align="center" style="color:#ffffff";>
-        1. No fer trampa.
-        Jugar un joc és senzill.
+        1. No hacer trampa.
+        Jugar un juego es sencillo.
         <br>
         <br>
-        2. Ser un bon perdedor.
-        No vas fer trampa i vas perdre. Entenem per què de vegades pot ser frustrant invertir tant en un joc i no guanyar. Però això no justifica que tinguis actituds negatives.
+        2. Ser un buen perdedor.
+        No hiciste trampa y perdiste. Entendemos por qué a veces puede ser frustrante invertir tanto en un juego y no ganar. Pero esto no justifica que tengas actitudes negativas.
         <br>
         <br>
-        3. Parar atenció a les regles
-        Explicar un joc de taula no és cosa fàcil i és una inversió desforç i temps que una altra persona està fent perquè tu et puguis divertir. Si algú més està explicant un joc, posa atenció.
+        3. Prestar atención a las reglas
+        Contar un juego de mesa no es cosa fácil y es una inversión de esfuerzo y tiempo que otra persona está haciendo para que tú puedas divertirte. Si alguien más está contando un juego, pone atención.
         <br>
         <br>
-        4. Acabar els jocs
-        Això és senzill. Abans de jugar, esbrina quant de temps dura el joc. I si acceptes començar a jugar, estàs acceptant quedar-s'hi fins al final. Tingueu en compte que si hi ha persones noves al joc, es pot allargar entre un 20-40% més del que el joc suggereix (depenent del tipus de joc).
+        4. Terminar los juegos
+        Esto es sencillo. Antes de jugar, averigua cuánto tiempo dura el juego. Y si aceptas empezar a jugar, estás aceptando quedarse hasta el final. Tenga en cuenta que si hay personas nuevas en el juego, se puede alargar entre un 20-40% más de lo que el juego sugiere (dependiendo del tipo de juego).
         <br>
         <br>
-        5. Tractar bé el joc
-        Això és essencial. Si jugaràs un joc que no és teu, tracta-ho bé. Fins i tot si és teu. És normal que els jocs es gastin després de jugar-los moltes vegades, però no per això cal ser descurats amb aquests.
+        5. Tratar bien el juego
+        Esto es esencial. Si vas a jugar un juego que no es tuyo, trátalo bien. Incluso si es tuyo. Es normal que los juegos se gasten después de jugarlos muchas veces, pero no por eso hay que ser descuidados con ellos.
         <br>
         </h1>
         <form id="formulari">
             <input class="input" id="usuario" type="text" placeholder="Escriu el teu nom" required/>
             <br>
             <br>
-            <button id="boton2" type="submit" >Començar el Joc</button>
+            <button id="boton2" type="submit" >Empezar el Juego</button>
         </form>
 
         <script>
@@ -41,7 +41,7 @@
                 event.preventDefault()
                 let nom = document.querySelector('#usuario').value
                 sessionStorage.setItem('nomJugador', nom)
-                location.href = '../Credit de sintesi/Joc1.2.html'
+                location.href = '/Joc1.2.html'
             })
         </script>
     </body>
